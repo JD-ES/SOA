@@ -125,12 +125,13 @@ namespace forms1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var accountSid = "AC301f733ad73e433a61f32736eb3bc81f";
-            var authToken = "22eaccd93f3ca0d0623012e7d1c54640";
+            var accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+            var authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
+
             TwilioClient.Init(accountSid, authToken);
 
             var messageOptions = new CreateMessageOptions(
-                new PhoneNumber("whatsapp:+51952188592"));
+                new PhoneNumber("whatsapp:+number"));
             messageOptions.From = new PhoneNumber("whatsapp:+14155238886");
             messageOptions.Body = "El Id del proyecto es: " + textBox2.Text + " " + "El nombre del proyectos es "
                 + textBox3.Text + " " + "Ubicado en:" + textBox4.Text;
