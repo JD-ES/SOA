@@ -12,6 +12,11 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using RabbitMQ.Client;
 using RestSharp;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
+
+
 
 namespace forms1
 {
@@ -21,18 +26,29 @@ namespace forms1
         {
             InitializeComponent();
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
-            string ID = textBox1.Text;
-            RestClient proxy = new RestClient("http://localhost:59123/Service1.svc");
-            RestRequest request = new RestRequest("proyectos/" + ID, Method.GET, DataFormat.Json);
-            IRestResponse<proyects> response = proxy.Execute<proyects>(request);
-            textBox2.Text = response.Data.ID;
-            textBox3.Text = response.Data.Nombre;
-            textBox4.Text = response.Data.Ubicacion;
-            textBox5.Text = response.Data.Precio;
-            textBox6.Text = response.Data.estado;
+            try
+            {   if (ID != null)
+                {
+                    string ID = textBox1.Text;
+                    RestClient proxy = new RestClient("http://localhost:59123/Service1.svc");
+                    RestRequest request = new RestRequest("proyectos/" + ID, Method.GET, DataFormat.Json);
+                    IRestResponse<proyects> response = proxy.Execute<proyects>(request);
+                    textBox2.Text = response.Data.ID;
+                    textBox3.Text = response.Data.Nombre;
+                    textBox4.Text = response.Data.Ubicacion;
+                    textBox5.Text = response.Data.Precio;
+                    textBox6.Text = response.Data.estado;
+                    label1.Text = "Búsqueda realizada";
+                }
+        
+            }
+            catch  (Exception ex) 
+            {
+                label1.Text = ex.Message;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -106,5 +122,22 @@ namespace forms1
                 map.Zoom = 15;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var accountSid = "AC301f733ad73e433a61f32736eb3bc81f";
+            var authToken = "22eaccd93f3ca0d0623012e7d1c54640";
+            TwilioClient.Init(accountSid, authToken);
+
+            var messageOptions = new CreateMessageOptions(
+                new PhoneNumber("whatsapp:+51952188592"));
+            messageOptions.From = new PhoneNumber("whatsapp:+14155238886");
+            messageOptions.Body = "El Id del proyecto es: " + textBox2.Text + " " + "El nombre del proyectos es "
+                + textBox3.Text + " " + "Ubicado en:" + textBox4.Text;
+
+            var message = MessageResource.Create(messageOptions);
+            Console.WriteLine(message.Body);
+        }
+
     }
 }

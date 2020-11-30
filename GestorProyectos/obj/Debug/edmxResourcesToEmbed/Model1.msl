@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="InmobilariaModelStoreContainer" CdmEntityContainer="InmobilariaEntities">
+  <EntityContainerMapping StorageEntityContainer="proyectoStoreContainer" CdmEntityContainer="InmobilariaEntities">
     <EntitySetMapping Name="proyectoes">
-      <EntityTypeMapping TypeName="InmobilariaModel.proyecto">
+      <EntityTypeMapping TypeName="proyecto.proyecto">
         <MappingFragment StoreEntitySet="proyecto">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />

@@ -44,10 +44,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.mapa = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.mapa = new System.Windows.Forms.Button();
             this.map = new GMap.NET.WindowsForms.GMapControl();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(45, 394);
+            this.button1.Location = new System.Drawing.Point(45, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -167,7 +167,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(260, 394);
+            this.button2.Location = new System.Drawing.Point(260, 350);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -177,7 +177,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(54, 438);
+            this.textBox7.Location = new System.Drawing.Point(54, 394);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(281, 110);
@@ -190,9 +190,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.mapa);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox8);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.mapa);
             this.splitContainer1.Panel1.Controls.Add(this.textBox7);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.textBox6);
@@ -216,32 +216,30 @@
             this.splitContainer1.SplitterDistance = 393;
             this.splitContainer1.TabIndex = 15;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(16, 525);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.label1.MaximumSize = new System.Drawing.Size(300, 300);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 18;
+            // 
             // mapa
             // 
-            this.mapa.Location = new System.Drawing.Point(154, 394);
+            this.mapa.Location = new System.Drawing.Point(154, 350);
             this.mapa.Name = "mapa";
             this.mapa.Size = new System.Drawing.Size(75, 23);
             this.mapa.TabIndex = 17;
             this.mapa.Text = "Mapa";
             this.mapa.UseVisualStyleBackColor = true;
             this.mapa.Click += new System.EventHandler(this.mapa_Click_1);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(144, 335);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 23);
-            this.textBox8.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 341);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "País";
             // 
             // map
             // 
@@ -271,6 +269,16 @@
             this.map.Size = new System.Drawing.Size(778, 606);
             this.map.TabIndex = 0;
             this.map.Zoom = 0D;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(154, 525);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Enviar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -309,9 +317,9 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private GMap.NET.WindowsForms.GMapControl map;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button mapa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

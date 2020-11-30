@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Windows.Forms;
 
 namespace GestorProyectos
 {
@@ -44,7 +45,7 @@ namespace GestorProyectos
                                          autoDelete: false,
                                          arguments: null);
                     string message = "Proyecto encontrado!: ID " + ID + " " +  "el Nombre de proyecto es: " + mProy.Nombre + " "+  "Ubicado en" + mProy.Ubicacion + " " +
-                         " Ver en el Mapa: click em Mapa!!!!";
+                         " Ver en el Mapa: click en el Mapa!!!!";
                     var body = Encoding.UTF8.GetBytes(message);
                     channel.BasicPublish(exchange: "",
                                          routingKey: "proyecto",
@@ -57,8 +58,8 @@ namespace GestorProyectos
             }
             catch(Exception e)
             {
-                
-                return null;
+
+                throw e;
             }
         }
     }
