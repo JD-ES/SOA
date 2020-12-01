@@ -52,3 +52,12 @@ D:\DSD\GIT\SOA\GestorProyectos\obj\Debug\GestorProyectos.csproj.CoreCompileInput
 D:\DSD\GIT\SOA\GestorProyectos\obj\Debug\GestorProyectos.csproj.CopyComplete
 D:\DSD\GIT\SOA\GestorProyectos\obj\Debug\GestorProyectos.dll
 D:\DSD\GIT\SOA\GestorProyectos\obj\Debug\GestorProyectos.pdb
+D:\DSD\GIT\SOA\GestorProyectos\bin\Microsoft.IdentityModel.Logging.dll
+D:\DSD\GIT\SOA\GestorProyectos\bin\Microsoft.IdentityModel.Tokens.dll
+D:\DSD\GIT\SOA\GestorProyectos\bin\Newtonsoft.Json.dll
+D:\DSD\GIT\SOA\GestorProyectos\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\DSD\GIT\SOA\GestorProyectos\bin\Twilio.dll
+D:\DSD\GIT\SOA\GestorProyectos\bin\Microsoft.IdentityModel.Tokens.xml
+D:\DSD\GIT\SOA\GestorProyectos\bin\Newtonsoft.Json.xml
+D:\DSD\GIT\SOA\GestorProyectos\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\DSD\GIT\SOA\GestorProyectos\bin\Twilio.xml

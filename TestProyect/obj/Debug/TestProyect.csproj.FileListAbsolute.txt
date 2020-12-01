@@ -1,0 +1,17 @@
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\TestProyect.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\TestProyect.pdb
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\DSD\GIT\SOA\TestProyect\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\DSD\GIT\SOA\TestProyect\obj\Debug\TestProyect.csprojAssemblyReference.cache
+D:\DSD\GIT\SOA\TestProyect\obj\Debug\TestProyect.csproj.CoreCompileInputs.cache
+D:\DSD\GIT\SOA\TestProyect\obj\Debug\TestProyect.csproj.CopyComplete
+D:\DSD\GIT\SOA\TestProyect\obj\Debug\TestProyect.dll
+D:\DSD\GIT\SOA\TestProyect\obj\Debug\TestProyect.pdb

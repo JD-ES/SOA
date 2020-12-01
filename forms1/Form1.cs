@@ -18,6 +18,7 @@ using Twilio.Types;
 
 
 
+
 namespace forms1
 {
     public partial class Form1 : Form
@@ -43,6 +44,7 @@ namespace forms1
                     textBox6.Text = response.Data.estado;
                     label1.Text = "Búsqueda realizada";
                 }
+               
         
             }
             catch  (Exception ex) 
@@ -131,10 +133,11 @@ namespace forms1
             TwilioClient.Init(accountSid, authToken);
 
             var messageOptions = new CreateMessageOptions(
-                new PhoneNumber("whatsapp:+number"));
-            messageOptions.From = new PhoneNumber("whatsapp:+14155238886");
-            messageOptions.Body = "El Id del proyecto es: " + textBox2.Text + " " + "El nombre del proyectos es "
-                + textBox3.Text + " " + "Ubicado en:" + textBox4.Text;
+                new PhoneNumber("whatsapp:+"));
+            messageOptions.From = new PhoneNumber("whatsapp:+");
+            messageOptions.Body = "El Id del proyecto es: " + textBox2.Text + "" + "El nombre del proyectos es " + " " +
+                    textBox3.Text + " " + "Ubicado en: " + textBox4.Text;
+
 
             var message = MessageResource.Create(messageOptions);
             Console.WriteLine(message.Body);

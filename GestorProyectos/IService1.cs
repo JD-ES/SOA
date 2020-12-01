@@ -14,7 +14,22 @@ namespace GestorProyectos
     public interface IService1
     {
         [OperationContract]
-        [WebInvoke(UriTemplate = "proyectos/{ID}", Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+         [WebInvoke(UriTemplate = "proyectos/{ID}", Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         proyect BuscarProyectos(string ID);
+        [OperationContract]
+         [WebInvoke(UriTemplate = "add", Method = "POST", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        bool AgregarProyectos(proyecto mPro);
+        [OperationContract]
+       [WebInvoke(UriTemplate = "update", Method = "PUT", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        bool ModificarProyectos(proyecto mProye);
+
+        [OperationContract]
+          [WebInvoke(UriTemplate = "exist", Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        bool ExisteProyectos(string ID);
+        [OperationContract]
+         [WebInvoke(UriTemplate = "delete/{ID}", Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        bool EliminarProyectos(string ID);
+
     }
+
 }
