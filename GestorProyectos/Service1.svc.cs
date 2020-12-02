@@ -49,10 +49,10 @@ namespace GestorProyectos
                 mProy.estado = mProyTemp.estado;
                 var factory = new ConnectionFactory()
                 {
-                    HostName = "moose.rmq.cloudamqp.com",
-                    VirtualHost = "zvgcbkxw",
-                    UserName = "zvgcbkxw",
-                    Password = "SYn_rxQDqttTasFcUpwTa7-7-5GzPUjW"
+                    HostName = "Host",
+                    VirtualHost = "user",
+                    UserName = "user",
+                    Password = "Password"
                 };
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
@@ -139,8 +139,8 @@ namespace GestorProyectos
                     TwilioClient.Init(accountSid, authToken);
 
                     var messageOptions = new CreateMessageOptions(
-                        new PhoneNumber("whatsapp:"));
-                    messageOptions.From = new PhoneNumber("whatsapp:+");
+                        new PhoneNumber("whatsapp:+number"));
+                    messageOptions.From = new PhoneNumber("whatsapp:+number");
                     messageOptions.Body = "El Id del proyecto es: " +mProye.ID + "" + "El nombre del proyectos es " + " " +
                     mProye.Nombre + " " + "Ubicado en: " + mProye.Ubicacion;
                     var message = MessageResource.Create(messageOptions);

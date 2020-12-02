@@ -1,0 +1,7 @@
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\bin\WcfServiceCitas.dll.config
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\bin\WcfServiceCitas.dll
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\bin\WcfServiceCitas.pdb
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\obj\Debug\WcfServiceCitas.csprojAssemblyReference.cache
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\obj\Debug\WcfServiceCitas.csproj.CoreCompileInputs.cache
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\obj\Debug\WcfServiceCitas.dll
+D:\EPE\sistema distribuidos\WebRest\WcfServiceCitas\WcfServiceCitas\obj\Debug\WcfServiceCitas.pdb

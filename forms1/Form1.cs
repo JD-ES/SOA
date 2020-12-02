@@ -18,7 +18,6 @@ using Twilio.Types;
 
 
 
-
 namespace forms1
 {
     public partial class Form1 : Form
@@ -58,9 +57,9 @@ namespace forms1
             var factory = new ConnectionFactory()
             {
                 HostName = "moose.rmq.cloudamqp.com",
-                VirtualHost = "zvgcbkxw",
-                UserName = "zvgcbkxw",
-                Password = "SYn_rxQDqttTasFcUpwTa7-7-5GzPUjW"
+                VirtualHost = "Host",
+                UserName = "User",
+                Password = "Password"
             };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
@@ -123,6 +122,16 @@ namespace forms1
                 map.MaxZoom = 100;
                 map.Zoom = 15;
             }
+            else if (textBox4.Text == "Miraflores")
+            {
+                map.MapProvider = GMapProviders.GoogleMap;
+                double lati = Convert.ToDouble("-12.125839222014797");
+                double longti = Convert.ToDouble("-77.0297202437488");
+                map.Position = new PointLatLng(lati, longti);
+                map.MinZoom = 3;
+                map.MaxZoom = 100;
+                map.Zoom = 15;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -132,15 +141,13 @@ namespace forms1
 
             TwilioClient.Init(accountSid, authToken);
 
-            var messageOptions = new CreateMessageOptions(
-                new PhoneNumber("whatsapp:+"));
-            messageOptions.From = new PhoneNumber("whatsapp:+");
-            messageOptions.Body = "El Id del proyecto es: " + textBox2.Text + "" + "El nombre del proyectos es " + " " +
-                    textBox3.Text + " " + "Ubicado en: " + textBox4.Text;
+            var message = MessageResource.Create(
+              body: "El proyecto es: " + textBox3.Text + " " + "Ubicado en: " + textBox4.Text,
+              from: new Twilio.Types.PhoneNumber("+number"),
+              to: new Twilio.Types.PhoneNumber("+number")
+          );
 
-
-            var message = MessageResource.Create(messageOptions);
-            Console.WriteLine(message.Body);
+            Console.WriteLine(message.Sid);
         }
 
     }
